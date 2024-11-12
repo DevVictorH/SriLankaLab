@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*--- header ----*/
+header {
+    width: 100%;
+    background-color: #000000;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+
+.Login a:hover {
+    color: #174c77;
+}
+
+.Login{
+	color:white;
+}
+
+.logar {
+    margin-right: 10px;
+}
+
+.itens ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.itens li {
+    margin: 0 15px;
+}
+
+.itens a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.itens a:hover {
+    color: #174c77;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-list {
+    flex: 2;
+    margin-right: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.product-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-list th,
+.product-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.product-list th {
+    background-color: #000000;
+    color: white;
+}
+
+.product-form {
+    flex: 1;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.product-form h2 {
+    margin-bottom: 15px;
+}
+
+.product-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-form button {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-form button:hover {
+    background-color: #45a049;
+}
+
+.edit,
+.delete {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #2196F3;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #1e88e5;
+}
+
+.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete:hover {
+    background-color: #e53935;
+}

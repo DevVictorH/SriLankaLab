@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff; 
+}
+
+/*--- header ----*/
+header {
+    width: 100%;
+    background-color: #000000;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.barra-pesquisa {
+    flex: none;
+    display: flex;
+    margin: 0 20px;
+}
+
+.barra-pesquisa input {
+    border: none;
+    outline: none;
+    width: 350px;
+    padding: 22px;
+    border-top-left-radius: 40px; /* Arredonda o canto superior esquerdo */
+    border-bottom-left-radius: 40px;/* Arredonda o canto inferior esquerdo */
+    
+}
+
+.barra-pesquisa button {
+    width: 100px;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.Login p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Login a {
+    color: #ffffff;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Login a:hover {
+    color: #174c77;
+}
+
+.logar {
+    margin-right: 10px;
+}
+
+.itens ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.itens li {
+    margin: 0 15px;
+}
+
+.itens a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+
+.itens a:hover {
+    color: #174c77;
+}
+
+/* Slider */
+.slider {
+    width: 100%; 
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.slide {
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.slide img {
+    width: 38%;
+    height: auto; /* auto para evitar distorção */
+    max-height: 400px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+}
+
+/* Esconder os radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Quando o radio button está selecionado, mover o slider */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+/* Botões de navegação (indicadores abaixo do slider) */
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.nav-button {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+/* Indicadores ativos quando o slide correspondente está ativo */
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+    background-color: #333;
+}
+
+/* Conteudo Home*/
+
+/*Creatinas */
+.container-produtos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.container-produtos::after{
+    border: 6px solid rgba(0,0,0,0);
+    transition: 1s;
+}
+
+.container-produtos ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.container-produtos li {
+    flex: 1;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+.container-produtos li:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.container-produtos figure {
+    display: inline-block;
+}
+
+.container-produtos img {
+    width: 100%; /* Deixe a imagem ocupar toda a largura disponível */
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem seja cortada de maneira a preencher o espaço sem distorção */
+}
+
+.container-produtos figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*Creatinas */
+
+/*Whey Protein*/
+.container-whey{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.container-whey ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.container-whey li {
+    flex: 1;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+.container-whey li:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+
+.container-whey figure {
+    display: inline-block;
+}
+
+.container-whey img {
+    width: 100%; /* Deixe a imagem ocupar toda a largura disponível */
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem seja cortada de maneira a preencher o espaço sem distorção */
+}
+
+.container-whey figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*Whey Protein*/
+
+/*Pre treino*/
+.container-pre-treino{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+}
+.container-pre-treino ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.container-pre-treino li:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.container-pre-treino li {
+    flex: 1;
+    margin: 15px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+
+
+.container-pre-treino figure {
+    display: inline-block;
+}
+
+.container-pre-treino img {
+    width: 100%; /* Deixe a imagem ocupar toda a largura disponível */
+    height: 200px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem seja cortada de maneira a preencher o espaço sem distorção */
+}
+
+.container-pre-treino figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*Pre treino*/
+
+h2{
+    background-color: rgba(80,80,80,0.2);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 8px 8px 8px;
+}
+
+.linha{
+    border-bottom: 2px solid #555;
+}
+
+.botao-comprar{
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 150px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #ce0606;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    /* Estilos para telas menores que 768px */
+    .top-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .barra-pesquisa {
+      flex-direction: column;
+    }
+  
+    .barra-pesquisa input {
+      margin-bottom: 10px;
+    }
+  
+    .slider {
+      height: 300px; /* Ajuste a altura conforme necessário */
+    }
+  
+    .slide {
+      width: 100%;
+    }
+  }
+
+  /* Para telas com largura mínima de 1200px */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  
+    .container{
+        width: 30%;
+    }
+    .section {
+      /* Estilos específicos para a seção em telas maiores */
+      padding: 4rem;
+    }
+  }
+
+
+
+
+
