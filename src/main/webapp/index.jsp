@@ -83,7 +83,7 @@
                         <figcaption class="linha"></figcaption>
                         <figcaption>Creatina Growth</figcaption>
                         <figcaption>R$45,99</figcaption>
-                        <button type="submit" class="botao-comprar">Comprar</button>
+                        <a href="views/finalizarCompra.jsp"><button type="submit" class="botao-comprar">Comprar</button></a>
                     </figure>
                 </li>
 
@@ -103,7 +103,7 @@
                         <figcaption class="linha"></figcaption>
                         <figcaption>Creatina DarkLab</figcaption>
                         <figcaption>R$45,99</figcaption>
-                        <button type="submit" class="botao-comprar">Comprar</button>
+                         <a href="views/finalizarCompra.jsp"><button type="submit" class="botao-comprar">Comprar</button></a>
                     </figure>
                 </li>
             </ul>

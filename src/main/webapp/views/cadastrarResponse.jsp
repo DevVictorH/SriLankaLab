@@ -1,6 +1,6 @@
 <%@page import="dao.ClienteDao"%>
 <%@page import="model.Cliente"%>
-<%@page import="controller.ClienteController"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,14 +27,8 @@ ClienteDao dao = new ClienteDao();
 
 dao.inserir(clienteCriado);
 
-ClienteController controller = new ClienteController();
-
-
-
 
 %>
-
-   
 
 
 </body>

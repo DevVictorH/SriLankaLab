@@ -46,9 +46,33 @@
 		<br><br> 
 		<input type="password" name="senha" id="senha" placeholder="Senha">
 		<br><br> 
-		<button class="entrar" type="button">Entrar</button>
+		<button class="entrar" type="submit">Entrar</button>
 		<a class="esqueci-senha" href="#">Esqueci minha senha</a>
 	</form>
+	
+	<%
+		Connection conexao = ConnectionFactory.getConexao();
+	
+	if (conexao != null) {
+        if ((request.getParameter("email") !=null) && (request.getParameter("senha") !=null)) {
+            String login, senha;
+            login = request.getParameter("email");
+            senha = request.getParameter("senha");
+            Statement st;
+            ResultSet rs;
+            st = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
+            rs = st.executeQuery("select * from clientes where email ='"+login+"' and senha ='"+senha+"'");
+            if(rs.next()){
+                response.sendRedirect("../index.jsp");
+            }
+        }
+    }else {
+        out.println("Não foi possivel logar");
+    }
+
+	
+	%>
+	
 
 </body>
 </html>

@@ -10,7 +10,7 @@ import java.io.IOException;
 import model.Produto;
 import model.ProdutoValidador;
 
-@WebServlet("/ProdutoServlet")
+
 public class ProdutoServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 

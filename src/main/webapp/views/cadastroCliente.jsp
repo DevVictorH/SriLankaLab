@@ -37,8 +37,8 @@
         </nav>
     </header>
 
-    <form action="novo" class="formCadastro" method="get">
-        <h1>Cadastro Cliente</h1>
+    <form action="${pageContext.request.contextPath}/clientes/novo" class="formCadastro" method="get">
+        <h1>Cadastro Cliente</h1>       
         <input type="text" id="nome" name="nome" placeholder="Nome Completo">
         <br><br>
         <input type="email" id="email" name="email" placeholder="Email">

@@ -40,4 +40,14 @@
     <url-pattern>/clientes/excluir</url-pattern>
     <url-pattern>/clientes/listar</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CarrinhoServlet</display-name>
+    <servlet-name>CarrinhoServlet</servlet-name>
+    <servlet-class>servlet.CarrinhoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarrinhoServlet</servlet-name>
+    <url-pattern>/CarrinhoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

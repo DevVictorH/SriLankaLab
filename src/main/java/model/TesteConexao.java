@@ -33,7 +33,7 @@ public class TesteConexao {
 	        for(Pessoa p : pessoas){
 	            System.out.println(p.getCodigo() + " - " + p.getNome());
 	        }
-/*
+
 	        st.close();
 	        conexao.close();
 	        
@@ -49,6 +49,6 @@ public class TesteConexao {
 			st.close();
 	        conexao.close();
 	        
-*/	        
+	        
 	}
 }
