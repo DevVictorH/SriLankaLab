@@ -63,7 +63,7 @@
             st = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
             rs = st.executeQuery("select * from clientes where email ='"+login+"' and senha ='"+senha+"'");
             if(rs.next()){
-                response.sendRedirect("../index.jsp");
+                response.sendRedirect("../indexLogado.jsp");
             }
         }
     }else {

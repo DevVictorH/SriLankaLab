@@ -24,7 +24,6 @@ Cliente clienteCriado = new Cliente(nome, cpf, email, senha);
 ClienteDao dao = new ClienteDao();
 
 
-
 %>
 
 
