@@ -12,14 +12,14 @@
   <header>
         <div class="top-header">
             <div class="logo">
-                <a href="#"><img src="../img/Logo pi.png" alt="Logo"></a>
+                <a href="../indexAdmin.jsp"><img src="../img/Logo pi.png" alt="Logo"></a>
             </div>
             <nav class="itens">
                 <ul>
                     <li><a href="#">Menu Admin</a></li>
-                    <li><a href="#">Gerenciar Produtos</a></li>
-                    <li><a href="#">Configurações </a></li>
-                    <li><a href="#">Sair</a></li>
+                    <li><a href="manutencaoProduto.jsp">Gerenciar Produtos</a></li>
+                    <li><a href="manutencaoCliente.jsp">Configurações </a></li>
+                    <li><a href="../index.jsp">Sair</a></li>
                 </ul>
             </nav>
 
