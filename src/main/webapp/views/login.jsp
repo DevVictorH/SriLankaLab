@@ -51,26 +51,37 @@
 	</form>
 	
 	<%
-		Connection conexao = ConnectionFactory.getConexao();
 	
-	if (conexao != null) {
-        if ((request.getParameter("email") !=null) && (request.getParameter("senha") !=null)) {
-            String login, senha;
-            login = request.getParameter("email");
-            senha = request.getParameter("senha");
-            Statement st;
-            ResultSet rs;
-            st = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
-            rs = st.executeQuery("select * from clientes where email ='"+login+"' and senha ='"+senha+"'");
-            if(rs.next()){
-                response.sendRedirect("../indexLogado.jsp");
-            }
-        }
-    }else {
-        out.println("Não foi possivel logar");
-    }
+	Connection conexao = ConnectionFactory.getConexao();
 
-	
+	if (conexao != null) {
+	    if ((request.getParameter("email") != null) && (request.getParameter("senha") != null)) {
+	        String login, senha;
+	        login = request.getParameter("email");
+	        senha = request.getParameter("senha");
+	        Statement st;
+	        ResultSet rs;
+
+	        // Verificar se é o administrador
+	        if ("admin@adm.com".equals(login) && "adm".equals(senha)) {
+	            response.sendRedirect("../indexAdmin.jsp");
+	        } else {
+	            // Verificar outros logins
+	            st = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
+	            rs = st.executeQuery("select * from clientes where email ='" + login + "' and senha ='" + senha + "'");
+	            if (rs.next()) {
+	                response.sendRedirect("../indexLogado.jsp");
+	            } else {
+	                out.println("Login ou senha inválidos");
+	            }
+	        }
+	    } else {
+	        out.println("Email ou senha não fornecidos");
+	    }
+	} else {
+	    out.println("Não foi possível conectar ao banco de dados");
+	}
+
 	%>
 	
 

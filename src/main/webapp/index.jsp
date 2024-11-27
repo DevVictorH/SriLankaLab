@@ -32,10 +32,9 @@
         </div>
         <nav class="itens">
             <ul>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Creatina</a></li>
-                <li><a href="#">Whey </a></li>
-                <li><a href="#">Pré Treino</a></li>
+                <li><a href="#creatinas">Creatina</a></li>
+                <li><a href="#wheys">Whey </a></li>
+                <li><a href="#pretreinos">Pré Treino</a></li>
             </ul>
         </nav>
     </header>
@@ -72,7 +71,7 @@
     <!-- Carrossel -->
 
     
-    <div class="container-produtos">
+    <div id="creatinas" class="container-produtos">
         <section class="painel">
             <h2>Creatinas</h2>
             <ul>
@@ -110,7 +109,7 @@
         </section>
     </div>
 
-    <div class="container-whey">
+    <div id="wheys" class="container-whey">
         <section>
             <h2>Whey Protein</h2>
             <ul>
@@ -148,7 +147,7 @@
         </section>
     </div>
 
-    <div class="container-pre-treino">
+    <div id="pretreinos" class="container-pre-treino">
         <section>
             <h2>Pré Treino</h2>
             <ul>
