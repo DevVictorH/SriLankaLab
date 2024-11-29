@@ -27,14 +27,7 @@
                 </p>
             </div>
         </div>
-        <nav class="itens">
-            <ul>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Creatina</a></li>
-                <li><a href="#">Whey </a></li>
-                <li><a href="#">Pré Treino</a></li>
-            </ul>
-        </nav>
+    
     </header>
 
     <form action="${pageContext.request.contextPath}/clientes/novo" class="formCadastro" method="get">

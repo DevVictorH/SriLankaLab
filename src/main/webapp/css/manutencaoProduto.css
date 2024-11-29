@@ -158,3 +158,28 @@ header {
 .delete:hover {
     background-color: #e53935;
 }
+
+.piroca {
+    background-color: #76e053; /* Cor de destaque (amarelo) */
+    color: white; /* Texto preto */
+    padding: 10px 20px; /* Tamanho do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito para chamar atenção */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 45%;
+}
+
+.piroca:hover {
+    background-color: #5eb342; /* Amarelo mais escuro no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+.piroca:active {
+    background-color: #5eb342; /* Amarelo ainda mais escuro no clique */
+    transform: scale(1); /* Reseta o efeito de hover ao clicar */
+}
+
+

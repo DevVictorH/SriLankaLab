@@ -1,15 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="model.Produto" %>
+<%@ page import="dao.ProdutoDAO" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="../css/manutencaoProduto.css">
-<title>Produtos</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/manutencaoProduto.css">
+    <title>Manutenção de Produtos</title>
 </head>
 <body>
-
-  <header>
+    <header>
         <div class="top-header">
             <div class="logo">
                 <a href="../indexAdmin.jsp"><img src="../img/Logo pi.png" alt="Logo"></a>
@@ -17,9 +18,9 @@
             <nav class="itens">
                 <ul>
                     <li><a href="#">Menu Admin</a></li>
-                    <li><a href="manutencaoProduto.jsp">Gerenciar Produtos</a></li>
+                    <li><a href="views/manutencaoProduto.jsp">Gerenciar Produtos</a></li>
                     <li><a href="manutencaoCliente.jsp">Configurações </a></li>
-                    <li><a href="../index.jsp">Sair</a></li>
+                    <li><a href="index.jsp">Sair</a></li>
                 </ul>
             </nav>
 
@@ -43,66 +44,41 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Produto 1</td>
-                        <td>R$ 50,00</td>
-                        <td>
+                    <%
+                        ProdutoDAO dao = new ProdutoDAO();
+                        List<Produto> produtos = dao.listarProdutos(); // Chama os produtos do banco
+                        for (Produto produto : produtos) {
+                    %>
+                        <tr>
+                            <td><%= produto.getNome() %></td>
+                            <td>R$ <%= String.format("%.2f", produto.getPreco()) %></td>
+                            
+                           
+        
+                            <td>
+                             <form action="${pageContext.request.contextPath}/removerProduto" method="post">
+                            <input type="hidden" name="idProduto" value="<%= produto.getId() %>">
+                            <button type="submit" class="delete">Remover</button>
                             <button class="edit">Editar</button>
-                            <button class="delete">Remover</button>
+                             </form>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Produto 2</td>
-                        <td>R$ 30,00</td>
-                        <td>
-                            <button class="edit">Editar</button>
-                            <button class="delete">Remover</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Produto 3</td>
-                        <td>R$ 70,00</td>
-                        <td>
-                            <button class="edit">Editar</button>
-                            <button class="delete">Remover</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Produto 4</td>
-                        <td>R$ 100,00</td>
-                        <td>
-                            <button class="edit">Editar</button>
-                            <button class="delete">Remover</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Produto 5</td>
-                        <td>R$ 20,00</td>
-                        <td>
-                            <button class="edit">Editar</button>
-                            <button class="delete">Remover</button>
-                        </td>
-                    </tr>
+                        </tr>
+                        
+                    <%
+                        }
+                    %>
                 </tbody>
             </table>
-        </div>
-
-        <div class="product-form">
-            <h2>Adicionar/Editar Produto</h2>
-            <form>
-                <label for="product-name">Nome do Produto:</label>
-                <input type="text" id="product-name" required>
-
-                <label for="product-price">Preço:</label>
-                <input type="number" id="product-price" required>
-
-                <label for="imagem-produto">Imagem: </label>
-                <input type="file" id="product-image" accept="image/*" required>
-
-                <button type="submit">Salvar</button>
-            </form>
+            <% 
+    if (produtos.isEmpty()) {
+        out.println("Nenhum produto encontrado!");
+    }
+%>
         </div>
     </div>
-
+    
+    
+   <a href="cadastroProduto.jsp"><button type="submit" class="piroca">Cadastrar Produto</button></a>
+    
 </body>
 </html>

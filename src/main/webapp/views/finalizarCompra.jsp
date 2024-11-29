@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    
 </head>
 
 <body>
@@ -19,7 +17,6 @@
                 <a href="../index.jsp"><img src="../img/Logo pi.png" alt="Logo" width="150px"></a>
             </div>
     </header>
-
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -33,14 +30,15 @@
                                 <h2>Sua compra</h2>
                             </div>
                             <div class="card-body">
-                                <img src="../img/darkLab creat.png" alt="Fuzzy Cardigan" class="img-thumbnail">
+                                <!-- Exibe o produto selecionado -->
+                                <img src="../img/<%= request.getParameter("imagem") %>" alt="Fuzzy Cardigan" class="img-thumbnail">
                                 <dl>
                                     <dt>Produto</dt>
-                                    <dd>Creatina</dd>
+                                    <dd><%= request.getParameter("produto") %></dd>
                                     <dt>Preço</dt>
-                                    <dd>R$ 49,90</dd>
+                                    <dd>R$ <%= request.getParameter("preco") %></dd>
                                     <dt>Descrição</dt>
-                                    <dd>300g</dd>
+                                    <dd><%= request.getParameter("descricao") %></dd> <!-- Se necessário, passe também uma descrição -->
                                 </dl>
                             </div>
                         </div>
@@ -55,15 +53,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail:</label>
-                                    <input type="email" class="form-control" placeholder="email@exemplo.com" id="email"
-                                        name="email">
+                                    <input type="email" class="form-control" placeholder="email@exemplo.com" id="email" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="cpf">CPF:</label>
-                                    <input type="text" class="form-control" id="cpf" name="cpf"
-                                        placeholder="000.000.000-00">
+                                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
                                 </div>
-
                             </fieldset>
                             <fieldset class="col-lg-6">
                                 <legend>Cartão de Crédito:</legend>
@@ -81,8 +76,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="validade-cartao">Validade:</label>
-                                    <input type="month" class="form-control" id="validade-cartao"
-                                        name="validade-cartao">
+                                    <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
                                 </div>
                             </fieldset>
                             <button type="submit" class="btn btn-primary">Confirmar Pedido</button>

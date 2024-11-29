@@ -5,14 +5,25 @@ public class Produto {
 	private double preco;
 	private int id;
 	private int quantidade;
+	private String descricao;
 	
-	public Produto(String nome, double preco, int id, int quantidade) {
+	
+
+	public Produto(String nome, double preco, int quantidade, String descricao) {
 		super();
 		this.nome = nome;
 		this.preco = preco;
-		this.id = id;
 		this.quantidade = quantidade;
+		this.descricao = descricao;
 	}
+	
+	public Produto(int id, String nome, double preco) {
+        this.id = id;
+        this.nome = nome;
+        this.preco = preco;
+    }
+	
+	public Produto() {}
 	
 	public String getNome() {
 		return nome;
@@ -39,6 +50,13 @@ public class Produto {
 		this.quantidade = quantidade;
 	}
 	
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 	
 
 }

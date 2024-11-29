@@ -15,27 +15,21 @@
             <div class="logo">
                 <a href="#"><img src="../img/Logo pi.png" alt="Logo"></a>
             </div>
-            <div class="barra-pesquisa">
-                <input type="text" placeholder="Pesquisar...">
-                <button type="submit"><img src="../img/Lupa.png" width="25px"></button>
-            </div>
+            <nav class="itens">
+                <ul>
+                    <li><a href="#">Menu Admin</a></li>
+                    <li><a href="views/manutencaoProduto.jsp">Gerenciar Produtos</a></li>
+                    <li><a href="views/manutencaoCliente.jsp">Configurações </a></li>
+                    <li><a href="../index.jsp">Sair</a></li>
+                </ul>
+            </nav>
 
             <div class="Login">
                 <p>
-                    <a class="logar" href="#">Login</a>
-                    |
-                    <a class="cadastrar" href="#">Cadastre-se</a>
+                    Usuário:Admin
                 </p>
             </div>
         </div>
-        <nav class="itens">
-            <ul>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Creatina</a></li>
-                <li><a href="#">Whey </a></li>
-                <li><a href="#">Pré Treino</a></li>
-            </ul>
-        </nav>
     </header>
 
 <form action="${pageContext.request.contextPath}/ProdutoServlet" method="post">
