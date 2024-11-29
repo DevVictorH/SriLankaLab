@@ -80,4 +80,24 @@
     <servlet-name>RelatorioVendasServlet</servlet-name>
     <url-pattern>/RelatorioVendasServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegistrarPedidoServlet</display-name>
+    <servlet-name>RegistrarPedidoServlet</servlet-name>
+    <servlet-class>servlet.RegistrarPedidoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrarPedidoServlet</servlet-name>
+    <url-pattern>/RegistrarPedidoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AtualizarClienteServlet</display-name>
+    <servlet-name>AtualizarClienteServlet</servlet-name>
+    <servlet-class>servlet.AtualizarClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AtualizarClienteServlet</servlet-name>
+    <url-pattern>/AtualizarClienteServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

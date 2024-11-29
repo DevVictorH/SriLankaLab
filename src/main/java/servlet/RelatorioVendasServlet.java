@@ -33,6 +33,7 @@ public class RelatorioVendasServlet extends HttpServlet {
                     System.out.println("ID Venda: " + venda[0] + ", Data: " + venda[1] + ", Cliente: " + venda[2]);
                 }
                 request.setAttribute("vendas", vendas);
+
             } else {
                 System.out.println("Nenhuma venda encontrada no banco de dados.");
                 request.setAttribute("vendas", null);

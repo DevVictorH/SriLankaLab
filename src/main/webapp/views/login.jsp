@@ -40,7 +40,7 @@
 		<input type="password" name="senha" id="senha" placeholder="Senha">
 		<br><br> 
 		<button class="entrar" type="submit">Entrar</button>
-		<a class="esqueci-senha" href="#">Esqueci minha senha</a>
+		<a class="esqueci-senha" href="../img/gato.png">Esqueci minha senha</a>
 	</form>
 	
 	<%

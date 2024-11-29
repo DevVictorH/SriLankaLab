@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Relatório de Vendas</title>
-    <link rel="stylesheet" href="../css/relatorioVendas.css">
+    <link rel="stylesheet" href="css/relatorioVendas.css">
 </head>
 <body>
     <header>
         <div class="top-header">
             <div class="logo">
-                <a href="#"><img src="../img/Logo pi.png" alt="Logo"></a>
+                <a href="#"><img src="img/Logo pi.png" alt="Logo"></a>
             </div>
             <nav class="itens">
                 <ul>
@@ -29,13 +29,10 @@
 
     <div class="container">
         <h1>Relatório de Vendas</h1>
-
-        <!-- Mensagem se não houver vendas -->
         <c:if test="${empty vendas}">
             <p style="color: red;">Nenhuma venda registrada.</p>
         </c:if>
 
-        <!-- Tabela de Vendas -->
         <c:if test="${not empty vendas}">
             <table border="1">
                 <thead>

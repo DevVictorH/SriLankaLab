@@ -6,6 +6,7 @@ public class Cliente {
 	private String senha;
 	private String email;
 	private int id;
+	private String dataNasc;
 	
 	
 	public Cliente() {
@@ -19,8 +20,6 @@ public class Cliente {
 		this.senha = senha;
 		this.email = email;
 	}
-	
-	
 
 	public Cliente(String cpf, String nome) {
 		this.cpf = cpf;
@@ -66,6 +65,15 @@ public class Cliente {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public String getDataNasc() {
+		return dataNasc;
+	}
+
+	public void setDataNasc(String dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
 
 		
 }

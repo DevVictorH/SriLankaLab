@@ -42,45 +42,49 @@
                             </div>
                         </div>
                     </div>
-                    <form class="col-md-8 col-xl-9">
-                        <div class="row">
-                            <fieldset class="col-lg-6">
-                                <legend>Dados Pessoais:</legend>
-                                <div class="form-group">
-                                    <label for="nome">Nome Completo:</label>
-                                    <input type="text" class="form-control" id="nome" name="nome" required autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-mail:</label>
-                                    <input type="email" class="form-control" placeholder="email@exemplo.com" id="email" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cpf">CPF:</label>
-                                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
-                                </div>
-                            </fieldset>
-                            <fieldset class="col-lg-6">
-                                <legend>Cartão de Crédito:</legend>
-                                <div class="form-group">
-                                    <label for="numero-cartao">Número - CVV</label>
-                                    <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
-                                </div>
-                                <div class="form-group">
-                                    <label for="bandeira-cartao">Bandeira</label>
-                                    <select class="custom-select" id="bandeira-cartao">
-                                        <option disabled selected>Selecione uma opção...</option>
-                                        <option value="master">MASTERCARD</option>
-                                        <option value="visa">VISA</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="validade-cartao">Validade:</label>
-                                    <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
-                                </div>
-                            </fieldset>
-                            <button type="submit" class="btn btn-primary">Confirmar Pedido</button>
-                        </div>
-                    </form>
+                   <form class="col-md-8 col-xl-9" method="POST" action="../registrarPedido">
+    <div class="row">
+        <fieldset class="col-lg-6">
+            <legend>Dados Pessoais:</legend>
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" placeholder="email@exemplo.com" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00">
+            </div>
+        </fieldset>
+        <fieldset class="col-lg-6">
+            <legend>Cartão de Crédito:</legend>
+            <div class="form-group">
+                <label for="numero-cartao">Número - CVV</label>
+                <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+            </div>
+            <div class="form-group">
+                <label for="bandeira-cartao">Bandeira</label>
+                <select class="custom-select" id="bandeira-cartao" name="bandeira-cartao">
+                    <option disabled selected>Selecione uma opção...</option>
+                    <option value="master">MASTERCARD</option>
+                    <option value="visa">VISA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="validade-cartao">Validade:</label>
+                <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+            </div>
+        </fieldset>
+        <input type="hidden" name="produto" value="<%= request.getParameter("produto") %>">
+        <input type="hidden" name="preco" value="<%= request.getParameter("preco") %>">
+        <input type="hidden" name="imagem" value="<%= request.getParameter("imagem") %>">
+        <button type="submit" class="btn btn-primary">Confirmar Pedido</button>
+    </div>
+</form>
+                   
                 </div>
             </div>
         </div>

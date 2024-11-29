@@ -93,7 +93,7 @@
             <figcaption class="linha"></figcaption>
             <figcaption>Creatina MaxTitanium</figcaption>
             <figcaption>R$90.99</figcaption>
-            <a href="views/finalizarCompra.jsp?produto=Creatina%20MaxTitanium&preco=90.99&imagem=Max.png">
+            <a href="views/finalizarCompra.jsp?produto=Creatina%20MaxTitanium&preco=90.99&imagem=Max.png&descricao=300g">
                 <button type="submit" class="botao-comprar">Comprar</button>
             </a>
         </figure>
@@ -105,7 +105,7 @@
             <figcaption class="linha"></figcaption>
             <figcaption>Creatina DarkLab</figcaption>
             <figcaption>R$60.50</figcaption>
-            <a href="views/finalizarCompra.jsp?produto=Creatina%20DarkLab&preco=60.50&imagem=darkLab%20creat.png">
+            <a href="views/finalizarCompra.jsp?produto=Creatina%20DarkLab&preco=60.50&imagem=darkLab%20creat.png&descricao=300g">
                 <button type="submit" class="botao-comprar">Comprar</button>
             </a>
         </figure>
@@ -115,7 +115,7 @@
         </section>
     </div>
 
-    <div class="container-whey">
+    <div id="wheys" class="container-whey">
         <section>
             <h2>Whey Protein</h2>
 <ul>
@@ -159,7 +159,7 @@
         </section>
     </div>
 
-    <div class="container-pre-treino">
+    <div id="pretreinos" class="container-pre-treino">
         <section>
             <h2>Pré Treino</h2>
 <ul>

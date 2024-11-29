@@ -148,4 +148,33 @@ public class ClienteDao {
 
 	    return cliente;
 	}
+	
+	public int obterOuCriarCliente(String nome, String email, String cpf) throws Exception {
+        Connection conn = ConnectionFactory.getConexao();
+
+        String queryVerificar = "SELECT idCliente FROM clientes WHERE cpf = ?";
+        PreparedStatement stmt = conn.prepareStatement(queryVerificar);
+        stmt.setString(1, cpf);
+        ResultSet rs = stmt.executeQuery();
+
+        if (rs.next()) {
+            return rs.getInt("idCliente");
+        }
+
+        // Inserir novo cliente
+        String queryInserir = "INSERT INTO clientes (nome, cpf, email, senha) VALUES (?, ?, ?, ?)";
+        stmt = conn.prepareStatement(queryInserir, PreparedStatement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, nome);
+        stmt.setString(2, cpf);
+        stmt.setString(3, email);
+        stmt.setString(4, "123");
+        stmt.executeUpdate();
+
+        rs = stmt.getGeneratedKeys();
+        if (rs.next()) {
+            return rs.getInt(1);
+        }
+
+        throw new Exception("Erro ao inserir cliente.");
+    }
 }

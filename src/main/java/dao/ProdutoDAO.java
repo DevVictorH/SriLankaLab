@@ -96,9 +96,9 @@ public class ProdutoDAO {
 
 	        while (rs.next()) {
 	            Object[] venda = new Object[3];
-	            venda[0] = rs.getInt("idPedido"); // Código da venda
-	            venda[1] = rs.getDate("dataPedido"); // Data da venda
-	            venda[2] = rs.getString("nome"); // Nome do cliente
+	            venda[0] = rs.getInt("idPedido"); 
+	            venda[1] = rs.getDate("dataPedido"); 
+	            venda[2] = rs.getString("nome"); 
 	            vendas.add(venda);
 
 	            System.out.println("Venda carregada no DAO: ID=" + venda[0] + ", Cliente=" + venda[2] + ", Data=" + venda[1]);
