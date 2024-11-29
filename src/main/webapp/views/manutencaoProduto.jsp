@@ -17,8 +17,8 @@
             </div>
             <nav class="itens">
                 <ul>
-                    <li><a href="#">Menu Admin</a></li>
-                    <li><a href="views/manutencaoProduto.jsp">Gerenciar Produtos</a></li>
+                    <li><a href="relatorioVendas.jsp">Menu Admin</a></li>
+                    <li><a href="manutencaoProduto.jsp">Gerenciar Produtos</a></li>
                     <li><a href="manutencaoCliente.jsp">Configurações </a></li>
                     <li><a href="index.jsp">Sair</a></li>
                 </ul>

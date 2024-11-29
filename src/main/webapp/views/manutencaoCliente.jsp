@@ -17,8 +17,7 @@
             </div>
             <div class="Login">
                 <p>
-                <a href="views/carrinho.jsp"><img src="../img/carrinho.png" width="48px"></a>
-                <a href="views/manutencaoCliente.jsp"><img src="../img/perfil.png" width="65px"></a>
+                <a href="manutencaoCliente.jsp"><img src="../img/perfil.png" width="65px"></a>
                 </p>
             </div>
 

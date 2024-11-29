@@ -60,4 +60,24 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RelatórioVendasServlet</display-name>
+    <servlet-name>RelatórioVendasServlet</servlet-name>
+    <servlet-class>servlet.RelatórioVendasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RelatórioVendasServlet</servlet-name>
+    <url-pattern>/RelatórioVendasServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RelatorioVendasServlet</display-name>
+    <servlet-name>RelatorioVendasServlet</servlet-name>
+    <servlet-class>servlet.RelatorioVendasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RelatorioVendasServlet</servlet-name>
+    <url-pattern>/RelatorioVendasServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

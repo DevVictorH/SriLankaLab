@@ -25,7 +25,7 @@
                 <p>
                     <a class="logar" href="#">Login</a>
                     |
-                    <a class="cadastrar" href="#">Cadastre-se</a>
+                    <a class="cadastrar" href="cadastroCliente.jsp">Cadastre-se</a>
                 </p>
             </div>
         </div>

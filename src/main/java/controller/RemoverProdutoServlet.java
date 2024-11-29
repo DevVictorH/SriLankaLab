@@ -24,7 +24,7 @@ public class RemoverProdutoServlet extends HttpServlet {
             boolean sucesso = dao.excluir(idProduto);
 
             if (sucesso) {
-                response.sendRedirect("views/manutencaoProduto.jsp"); // Redireciona para a página de produtos
+                response.sendRedirect("views/manutencaoProduto.jsp"); 
             } else {
                 response.getWriter().println("Erro ao remover produto.");
             }

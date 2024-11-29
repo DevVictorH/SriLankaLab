@@ -26,37 +26,30 @@ public class ProdutoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-        	ProdutoDAO dao = new ProdutoDAO();
-            // Coleta dos parâmetros
+            ProdutoDAO dao = new ProdutoDAO();
             String nome = request.getParameter("nome");
             String preco = request.getParameter("preco");
             String strQuantidade = request.getParameter("quantidade");
             String desc = request.getParameter("descricao");
 
-            // Criação do objeto Produto
-            Produto produto = new Produto(nome, Double.parseDouble(preco),Integer.parseInt(strQuantidade), desc);
-            dao.inserir(produto);
-            
-            
+            Produto produto = new Produto(nome, Double.parseDouble(preco), Integer.parseInt(strQuantidade), desc);
+
             // Validação do produto
             String mensagemErro = ProdutoValidador.validar(produto);
 
             if (mensagemErro != null) {
-                // Exceção para erros de validação
-                request.setAttribute("erro", mensagemErro);
-                request.getRequestDispatcher("/views/cadastroProduto.jsp").forward(request, response);
-                System.out.print("passou no if");
+                // Exibe mensagem de erro e redireciona para a mesma página
+                request.getSession().setAttribute("erro", mensagemErro);
+                response.sendRedirect(request.getContextPath() + "/views/cadastroProduto.jsp");
             } else {
-                // Caso contrário, redirecionar para a página de sucesso ou exibir a mensagem
-                request.setAttribute("sucesso", "Produto cadastrado com sucesso!");
-                request.getRequestDispatcher("/views/cadastroProduto.jsp").forward(request, response);
-                System.out.print("passou no else");
+                dao.inserir(produto); // Salva no banco de dados
+                request.getSession().setAttribute("sucesso", "Produto cadastrado com sucesso!");
+                response.sendRedirect(request.getContextPath() + "/views/cadastroProduto.jsp");
             }
         } catch (Exception e) {
-            // Exceção para outros erros
-            request.setAttribute("erro", "Erro ao cadastrar produto.");
-            request.getRequestDispatcher("/views/cadastroProduto.jsp").forward(request, response);
-            System.out.print("CATCH");
+            request.getSession().setAttribute("erro", "Erro ao cadastrar produto.");
+            response.sendRedirect(request.getContextPath() + "/views/cadastroProduto.jsp");
         }
     }
+
 }

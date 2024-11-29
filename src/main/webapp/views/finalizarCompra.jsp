@@ -30,7 +30,6 @@
                                 <h2>Sua compra</h2>
                             </div>
                             <div class="card-body">
-                                <!-- Exibe o produto selecionado -->
                                 <img src="../img/<%= request.getParameter("imagem") %>" alt="Fuzzy Cardigan" class="img-thumbnail">
                                 <dl>
                                     <dt>Produto</dt>
@@ -38,7 +37,7 @@
                                     <dt>Preço</dt>
                                     <dd>R$ <%= request.getParameter("preco") %></dd>
                                     <dt>Descrição</dt>
-                                    <dd><%= request.getParameter("descricao") %></dd> <!-- Se necessário, passe também uma descrição -->
+                                    <dd><%= request.getParameter("descricao") %></dd> 
                                 </dl>
                             </div>
                         </div>

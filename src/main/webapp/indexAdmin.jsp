@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <!-- Botões de navegação -->
+       
         <div class="navigation">
             <label for="slide1" class="nav-button"></label>
             <label for="slide2" class="nav-button"></label>
@@ -57,9 +57,7 @@
 
 
     </div>
-    <!-- Carrossel -->
-
-    
+       
     <div class="container-produtos">
         <section class="painel">
             <h2>Creatinas</h2>

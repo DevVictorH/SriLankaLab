@@ -18,8 +18,8 @@
             <nav class="itens">
                 <ul>
                     <li><a href="#">Menu Admin</a></li>
-                    <li><a href="views/manutencaoProduto.jsp">Gerenciar Produtos</a></li>
-                    <li><a href="views/manutencaoCliente.jsp">Configurações </a></li>
+                    <li><a href="manutencaoProduto.jsp">Gerenciar Produtos</a></li>
+                    <li><a href="manutencaoCliente.jsp">Configurações </a></li>
                     <li><a href="../index.jsp">Sair</a></li>
                 </ul>
             </nav>
@@ -35,12 +35,15 @@
 <form action="${pageContext.request.contextPath}/ProdutoServlet" method="post">
         <h1>Cadastro Produto</h1>
 
-        <c:if test="${not empty erro}">
-            <div style="color: red;">${erro}</div>
-        </c:if>
-        <c:if test="${not empty sucesso}">
-            <div style="color: green;">${sucesso}</div>
-        </c:if>
+        <c:if test="${not empty sessionScope.erro}">
+    	<div style="color: red;">${sessionScope.erro}</div>
+    	<c:remove var="erro" scope="session"/>
+		</c:if>
+		<c:if test="${not empty sessionScope.sucesso}">
+   		 <div style="color: green;">${sessionScope.sucesso}</div>
+    	<c:remove var="sucesso" scope="session"/>
+		</c:if>
+        
         <br />
 
         <label for="nome">Nome do Produto</label>

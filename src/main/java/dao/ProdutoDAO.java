@@ -42,8 +42,7 @@ public class ProdutoDAO {
 	         PreparedStatement ps = conexao.prepareStatement(sql)) {
 
 	        ps.setInt(1, id);
-	        int linhasAfetadas = ps.executeUpdate();
-	        System.out.println("Executando DELETE para idProduto: " + id);
+	        int linhasAfetadas = ps.executeUpdate();       
 	        if (linhasAfetadas > 0) {
 	            retorno = true;
 	        }
@@ -84,6 +83,33 @@ public class ProdutoDAO {
 		}
 		return retorno;
 	}
+	
+	public List<Object[]> listarRelatorioVendas() {
+	    List<Object[]> vendas = new ArrayList<>();
+	    String sql = "SELECT p.idPedido, p.dataPedido, c.nome FROM pedidos p INNER JOIN clientes c ON p.cliente_id = c.idCliente";
+
+	    try (Connection conexao = ConnectionFactory.getConexao();
+	         PreparedStatement stmt = conexao.prepareStatement(sql);
+	         ResultSet rs = stmt.executeQuery()) {
+
+	        System.out.println("Executando a query no DAO");
+
+	        while (rs.next()) {
+	            Object[] venda = new Object[3];
+	            venda[0] = rs.getInt("idPedido"); // Código da venda
+	            venda[1] = rs.getDate("dataPedido"); // Data da venda
+	            venda[2] = rs.getString("nome"); // Nome do cliente
+	            vendas.add(venda);
+
+	            System.out.println("Venda carregada no DAO: ID=" + venda[0] + ", Cliente=" + venda[2] + ", Data=" + venda[1]);
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+
+	    return vendas;
+	}
+
 	
 }
 
