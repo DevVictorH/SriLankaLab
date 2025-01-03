@@ -58,9 +58,9 @@
 
     </div>
        
-    <div class="container-produtos">
+    <div id="creatinas" class="container-produtos">
         <section class="painel">
-            <h2>Creatinas</h2>
+           <h2>Creatinas</h2>
 <ul>
     <li>
         <figure>
@@ -102,7 +102,7 @@
         </section>
     </div>
 
-    <div class="container-whey">
+    <div id="wheys" class="container-whey">
         <section>
             <h2>Whey Protein</h2>
 <ul>
@@ -146,7 +146,7 @@
         </section>
     </div>
 
-    <div class="container-pre-treino">
+    <div id="pretreinos" class="container-pre-treino">
         <section>
             <h2>Pré Treino</h2>
 <ul>
@@ -186,7 +186,6 @@
         </figure>
     </li>
 </ul>
-            
         </section>
 
     </div>

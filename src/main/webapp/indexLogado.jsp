@@ -71,9 +71,9 @@
     <!-- Carrossel -->
 
     
-    <div id="creatinas" class="container-produtos">
+   <div id="creatinas" class="container-produtos">
         <section class="painel">
-            <h2>Creatinas</h2>
+           <h2>Creatinas</h2>
 <ul>
     <li>
         <figure>
@@ -93,7 +93,7 @@
             <figcaption class="linha"></figcaption>
             <figcaption>Creatina MaxTitanium</figcaption>
             <figcaption>R$90.99</figcaption>
-            <a href="views/finalizarCompra.jsp?produto=Creatina%20MaxTitanium&preco=90.99&imagem=Max.png&descricao=300g">
+            <a href="views/finalizarCompra.jsp?produto=Creatina%20MaxTitanium&preco=90.99&imagem=Max.png">
                 <button type="submit" class="botao-comprar">Comprar</button>
             </a>
         </figure>
@@ -105,7 +105,7 @@
             <figcaption class="linha"></figcaption>
             <figcaption>Creatina DarkLab</figcaption>
             <figcaption>R$60.50</figcaption>
-            <a href="views/finalizarCompra.jsp?produto=Creatina%20DarkLab&preco=60.50&imagem=darkLab%20creat.png&descricao=300g">
+            <a href="views/finalizarCompra.jsp?produto=Creatina%20DarkLab&preco=60.50&imagem=darkLab%20creat.png">
                 <button type="submit" class="botao-comprar">Comprar</button>
             </a>
         </figure>

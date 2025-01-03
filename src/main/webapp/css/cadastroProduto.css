@@ -71,6 +71,7 @@ form {
     width: 50%;
     margin-top: 50px;
     box-shadow:  15px 15px 15px rgba(0, 0, 0, 0.6); /*Sombra do Formulario*/
+    margin-left: 40%;
 }
 
 h1 {

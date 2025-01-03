@@ -56,7 +56,7 @@
 	        ResultSet rs;
 
 	        // Verificar se é o administrador
-	        if ("admin@adm.com".equals(login) && "adm".equals(senha)) {
+	        if ("admin@admin.com".equals(login) && "adm123".equals(senha)) {
 	            response.sendRedirect("../indexAdmin.jsp");
 	        } else {
 	            // Verificar outros logins
